@@ -5,6 +5,6 @@ tags: ['D']
 date: "17/02/24"
 ---
 
-```C
+```c
 code { cout << farst >>}
 ```
