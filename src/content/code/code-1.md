@@ -6,5 +6,9 @@ date: "16/02/24"
 ---
 
 ```c
-code {}
+#include <stdio.h>
+
+void main(void) {
+    printf("F");
+}
 ```
