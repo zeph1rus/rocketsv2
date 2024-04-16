@@ -1,6 +1,8 @@
 ---
 import Sidebar from '../components/Sidebar.astro';
 import Header from '../components/Header.astro';
+import  '../styles/styles.css'
+
 interface Props {
 	title: string;
 }
@@ -18,13 +20,15 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
 	</head>
 	<body>
+
 	<main>
-	<div class="grid gap-1 grid-flow-col border-black border-2 p-0.5">
-		<div class="row-span-5 col-span-2 border-black border-2"><Sidebar /></div>
-		<div class="col-span-8 row-span-1 border-black border-2"><Header /></div>
-		<div class="row-span-4 col-span-8 border-black border-2"><slot /></div>
+	<div id="page" class="crt">
+		<nav><Sidebar /></nav>
+		<header><Header /></header>
+		<main><slot /></main>
 		<!--<div class="col-span-8 row-span-1 border-black border-2">Footer Here</div>-->
 	</div>
 	</main>
