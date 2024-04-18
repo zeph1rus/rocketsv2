@@ -1,7 +1,7 @@
 ---
 title: "Post 1"
 tags: ["woosh", "farts"]
-date: 14/02/24
+date: 2024-01-20
 ---
 ## Post Header In Markdown
 

@@ -2,7 +2,7 @@
 title: Dumb Code Post
 language: "C"
 tags: ['c']
-date: "16/02/24"
+date: 2024-02-16
 ---
 
 ```c

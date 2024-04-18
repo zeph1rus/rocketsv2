@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+export async function getStaticPaths({ paginate }) {
+    const pages = await getCollection('code');
+    // Generate pages from our array of astronauts, with 2 to a page for testing
+  return paginate(pages, { pageSize: 2 });
+    }
+// All paginated data is passed on the "page" prop
+const { page } = Astro.props;
+---
+<Layout title={page.title}>
+    {JSON.stringify(page)}
+    <ul>
+        {page.data.map(({ slug, data }) => <li><a href={`/code/${slug}`}>{data.title}</a>{JSON.stringify(data)}</li>)}
+    </ul>
+</Layout>

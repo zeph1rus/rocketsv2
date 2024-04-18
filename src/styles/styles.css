@@ -19,11 +19,26 @@
     }
     a {
         font-family: 'VT323', Fallback, sans-serif;
+        color: greenyellow;
 
     }
+
+    a:visited {
+        color: dodgerblue;
+    }
+
     .text  {
         font-family: 'VT323', Fallback, sans-serif;
     }
+
+    .content-div {
+        color: #CCCCCC;
+    }
+
+    h2 {
+        color: greenyellow;
+    }
+
 
     #page {
         display: grid;

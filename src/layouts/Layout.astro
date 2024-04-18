@@ -28,7 +28,7 @@ const { title } = Astro.props;
 	<div id="page" class="crt">
 		<nav><Sidebar /></nav>
 		<header><Header /></header>
-		<main><slot /></main>
+		<main><div class="content-div"><slot /></div></main>
 		<!--<div class="col-span-8 row-span-1 border-black border-2">Footer Here</div>-->
 	</div>
 	</main>
