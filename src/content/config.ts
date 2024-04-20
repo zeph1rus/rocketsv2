@@ -5,7 +5,8 @@ const postCollection = defineCollection({
     schema: z.object({
         title: z.string(),
         tags: z.array(z.string()),
-        date: z.date().transform((str) => new Date(str).toLocaleDateString()),
+        description: z.string(),
+        date: z.date().transform((str) => new Date(str).toDateString()),
     })
 });
 
@@ -17,7 +18,8 @@ const codeCollection = defineCollection({
         title: z.string(),
         language: z.string(),
         tags: z.array(z.string()),
-        date: z.date().transform((str) => new Date(str).toLocaleDateString()),
+        description: z.string(),
+        date: z.date().transform((str) => new Date(str).toDateString()),
 })});
 
 export const collections = {

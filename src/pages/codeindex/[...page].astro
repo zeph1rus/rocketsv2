@@ -14,4 +14,21 @@ const { page } = Astro.props;
     <ul>
         {page.data.map(({ slug, data }) => <li><a href={`/code/${slug}`}>{data.title}</a>{JSON.stringify(data)}</li>)}
     </ul>
+
+    <table class="navtable">
+        <tr class="navtable">
+            <td class="navtable">
+                {page.url.next ? <a href=`${page.url.next}`>Next</a> : "Next"}
+            </td>
+            <td class="navtable">
+                {page.url.prev ? <a href=`${page.url.prev}`>Prev</a> : "Prev"}
+            </td>
+            <td class="navtable">
+                {page.currentPage !== 1 ? <a href="/codeindex">First</a> : "First"}
+            </td>
+            <td class="navtable">
+                {page.currentPage !== page.lastPage ? <a href=`/codeindex/${page.lastPage}`>Last</a> : "Last"}
+            </td>
+        </tr>
+    </table>
 </Layout>

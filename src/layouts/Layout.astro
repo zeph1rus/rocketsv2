@@ -25,7 +25,7 @@ const { title } = Astro.props;
 	<body>
 
 	<main>
-	<div id="page" class="crt">
+	<div id="page" >
 		<nav><Sidebar /></nav>
 		<header><Header /></header>
 		<main><div class="content-div"><slot /></div></main>
@@ -33,5 +33,6 @@ const { title } = Astro.props;
 	</div>
 	</main>
 	</body>
+	<div id="underlay"></div>
 </html>
 

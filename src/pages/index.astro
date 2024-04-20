@@ -1,12 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro'
+import { getCollection } from 'astro:content';
+const code = await getCollection('code');
+const pages = await getCollection('posts');
+const MAX_POSTS = 4
+const latestPosts = [].concat(code, pages)
+	.sort((data_a, data_b) => {
+		return new Date(data_b.data.date) - new Date(data_a.data.date)
+	}).slice(0,MAX_POSTS)
+
+const { stuff } = Astro.props
 ---
-<Layout title="Welcome to Astro.">
+<Layout title="rocketsgoto.space">
+
+
 
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			Welcome to my dumb website
 		</p>
+			{latestPosts.map(({ collection, slug, data }) =>
+				<Card title={data.title},
+					  description={data.description}
+					  href={`/${collection}/${slug}`}>
+				</Card>
+			)}
 
 </Layout>
 

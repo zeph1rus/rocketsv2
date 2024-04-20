@@ -16,11 +16,19 @@
         background-color: #1f1f1f;
         color: greenyellow;
         font-size: xx-large;
+        background-image: url("/crt_grey.png");
     }
     a {
         font-family: 'VT323', Fallback, sans-serif;
         color: greenyellow;
 
+    }
+    .astro-code {
+        background-color: rgba(36, 41, 46, 0.7) !important;
+        border-style: groove;
+        border-color: #1f1f1f;
+        padding: 10px;
+        font-size: smaller;
     }
 
     a:visited {
@@ -39,6 +47,14 @@
         color: greenyellow;
     }
 
+    .navtable {
+        border-width: medium;
+        border-style: solid;
+        border-color: yellowgreen;
+        border-collapse: collapse;
+        padding: 5px;
+
+    }
 
     #page {
         display: grid;
@@ -77,8 +93,18 @@
         left: 0;
         bottom: 0;
         right: 0;
-        background: linear-gradient(rgba(8, 6, 6, 0) 75%, rgba(0, 0, 0, 0.25) 75%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 130, 0, 0.02), rgba(0, 0, 130, 0.06));
-        z-index: -5;
+        z-index: 2;
         background-size: 100% 3px, 6px 100%;
         pointer-events: none;
+    }
+
+    #underlay {
+        position:fixed;
+        z-index: 100;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        pointer-events: none;
+        backdrop-filter: blur(0.75px) opacity(0.7) saturate(100%);
     }
