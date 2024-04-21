@@ -5,5 +5,9 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rocketsgoto.space',
-  integrations: [sitemap()]
+  integrations: [sitemap()],
+  redirects: {
+    '/code': '/codeindex',
+    '/posts': '/postindex'
+  }
 });

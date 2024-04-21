@@ -11,7 +11,7 @@ export async function getStaticPaths({ paginate }) {
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
 ---
-<Layout title=`Post Index ${page.currentPage}`>
+<Layout title=`rocketsgotospace - Posts Page ${page.currentPage}`>
         {page.data.map(({ data, slug, collection }) => {
             return <Card
                 title={data.title}
@@ -30,10 +30,10 @@ const { page } = Astro.props;
                 {page.url.prev ? <a href=`${page.url.prev}`>Prev</a> : "Prev"}
             </td>
             <td class="navtable">
-                {page.currentPage !== 1 ? <a href="/codeindex">First</a> : "First"}
+                {page.currentPage !== 1 ? <a href="/postindex">First</a> : "First"}
             </td>
             <td class="navtable">
-                {page.currentPage !== page.lastPage ? <a href=`/codeindex/${page.lastPage}`>Last</a> : "Last"}
+                {page.currentPage !== page.lastPage ? <a href=`/postindex/${page.lastPage}`>Last</a> : "Last"}
             </td>
         </tr>
     </table>

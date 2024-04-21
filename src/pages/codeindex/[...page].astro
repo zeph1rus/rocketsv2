@@ -11,7 +11,7 @@ export async function getStaticPaths({ paginate }) {
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
 ---
-<Layout title=`Code Index ${page.currentPage}`>
+<Layout title=`rocketsgotospace - Code Page ${page.currentPage}`>
         {page.data.map(({ data, slug, collection }) => {
             return <Card
                 title={data.title}
