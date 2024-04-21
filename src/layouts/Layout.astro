@@ -1,38 +1,46 @@
 ---
 import Sidebar from '../components/Sidebar.astro';
 import Header from '../components/Header.astro';
-import  '../styles/styles.css'
+import '../styles/styles.css'
 
 interface Props {
-	title: string;
+    title: string;
 }
 
-const { title } = Astro.props;
+const {title} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="rocketsgoto.space A Dumb Website I Made"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="generator" content={Astro.generator}/>
+    <link rel="sitemap" href="/sitemap-index.xml"/>
+    <title>{title}</title>
 
-	</head>
-	<body>
+</head>
+<body>
 
-	<main>
-	<div id="page" >
-		<nav><Sidebar /></nav>
-		<header><Header /></header>
-		<main><div class="content-div"><slot /></div></main>
-		<!--<div class="col-span-8 row-span-1 border-black border-2">Footer Here</div>-->
-	</div>
-	</main>
-	</body>
-	<div id="underlay"></div>
+<main>
+    <div id="page">
+        <nav>
+            <Sidebar/>
+        </nav>
+        <header>
+            <Header/>
+        </header>
+        <main>
+            <div class="content-div">
+                <slot/>
+            </div>
+        </main>
+    </div>
+</main>
+</body>
+<div id="underlay"></div>
 </html>
 

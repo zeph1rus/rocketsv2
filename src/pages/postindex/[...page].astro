@@ -4,14 +4,14 @@ import Layout from "../../layouts/Layout.astro";
 import Card from "../../components/Card.astro"
 
 export async function getStaticPaths({ paginate }) {
-    const pages = await getCollection('code');
+    const pages = await getCollection('posts');
     // Generate pages from our array of astronauts, with 2 to a page for testing
   return paginate(pages, { pageSize: 3 });
     }
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
 ---
-<Layout title=`Code Index ${page.currentPage}`>
+<Layout title=`Post Index ${page.currentPage}`>
         {page.data.map(({ data, slug, collection }) => {
             return <Card
                 title={data.title}

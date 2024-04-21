@@ -3,20 +3,48 @@ interface Props {
 	title: string;
 	description: string;
 	href: string;
+	datestring: string
 }
 
-const { href, title, description } = Astro.props;
+const { href, title, description , datestring} = Astro.props;
 ---
-
+<a href={href}>
 <div class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
+	<div class="link-card-title">
+		{title}
+	</div>
 		<p>
 			{description}
 		</p>
-	</a>
+	<div class="link-card-date">
+		{datestring}
+	</div>
 </div>
+</a>
+
+<style>
+	a {
+		text-decoration: none;
+		color: greenyellow;
+		font-style: normal;
+	}
+	.link-card {
+		margin-bottom: 25px;
+		width: 60%;
+		border-color: greenyellow;
+		border-style: solid;
+		border-width: 2px;
+		color: #FFFFFF;
+	}
+	.link-card-title {
+		background-color: greenyellow;
+		color: rgba(31, 31, 31, 0.9);
+		padding: 1px;
+	}
+	.link-card-date {
+		color: greenyellow;
+		font-size: smaller;
+		text-align: right;
+	}
+</style>
 
