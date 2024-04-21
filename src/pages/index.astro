@@ -18,7 +18,7 @@ const latestPosts = [].concat(code, pages)
 			Stuff I made Recently:
 		</p>
 			{latestPosts.map(({ collection, slug, data }) =>
-				<Card title={data.title},
+				<Card title={data.title}
 					  description={data.description}
 					  href={`/${collection}/${slug}`}
 				datestring={data.date}>
