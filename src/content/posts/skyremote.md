@@ -40,8 +40,9 @@ TinyCad: ![Wiring Diagram](/images/skyremote-2.jpg)
 I have detailed the remote codes from the post linked above here in case this goes down. I've only implemented the ones I require in the header file, however it will be simple to add/remove as you need.
 
 
-```Sky+ commander buttons - cover closed
-00c00-00c09    0 to 9
+```
+Sky+ commander buttons - cover closed
+00c00-00c09             0 to 9
 00c0c                   on/off
 00c20                   ch+
 00c21                   ch-
@@ -68,5 +69,6 @@ I have detailed the remote codes from the post linked above here in case this go
 00c83			backup
 00ccb			i
 00ccc			tv guide
-00cf5			interactive```
+00cf5			interactive
+```
  
