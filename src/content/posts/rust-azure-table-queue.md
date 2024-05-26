@@ -2,7 +2,7 @@
 title: "Rust: Azure Table Queues"
 tags: ["examples"]
 date: 2024-03-21
-description: Using rust to push messages into an azure storage table queue (or any table api queue_
+description: Using rust to push messages into an azure storage queue (or any table api queue)
 ---
 
 ## Rust and Azure Table Queues
@@ -113,3 +113,4 @@ fn canonical_resource() -> String {
     cr_string.join("")
 }
 ```
+
