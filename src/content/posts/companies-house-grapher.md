@@ -12,7 +12,7 @@ This led to building this tool to graph companies house relationships using Grap
 
 I recently updated the tool to work with the updated companies house api, so I published it to GitHub
 
-Example: ![Example Graph](/images/ch_example.jpg)
+Example: ![Example Graph](/images/ch_example.png)
 
 See the full rendered graph here: [Rendered Graph](https://raw.githubusercontent.com/zeph1rus/companies_house_relationship_grapher/main/examples/WesleyPaulWilliamSTREETING.gv.svg)
 
